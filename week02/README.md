@@ -4,6 +4,7 @@
 https://github.com/wyfaixiaoyu/geek-university-homework/tree/master/week02/src/main/java/com/week2/question1
 
 #### 2.（选做）使用压测工具（wrk 或 sb），演练 gateway-server-0.0.1-SNAPSHOT.jar 示例。
+https://github.com/wyfaixiaoyu/geek-university-homework/tree/master/week02/src/main/java/com/week2/question2
 
 #### 3.（选做）如果自己本地有可以运行的项目，可以按照 2 的方式进行演练。
 
