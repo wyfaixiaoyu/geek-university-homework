@@ -1,6 +1,7 @@
 ### 5.（选做）运行课上的例子，以及 Netty 的例子，分析相关现象
 
 #### 单线程版本测试
+```Bash
 root@ubuntu:/home/huyang/wrk# wrk -d30s -c 10000 -t 8 'http://127.0.0.1:8080'
 Running 30s test @ http://127.0.0.1:8080
   8 threads and 10000 connections
@@ -11,8 +12,10 @@ Running 30s test @ http://127.0.0.1:8080
   Socket errors: connect 0, read 128981, write 710951, timeout 998
 Requests/sec:  27911.45
 Transfer/sec:      2.58MB
+```
 
 #### 多线程版本测试
+```Bash
 root@ubuntu:/home/huyang/wrk# wrk -d30s -c 10000 -t 8 'http://127.0.0.1:8080'
 Running 30s test @ http://127.0.0.1:8080
   8 threads and 10000 connections
@@ -23,8 +26,10 @@ Running 30s test @ http://127.0.0.1:8080
   Socket errors: connect 0, read 52974, write 66199, timeout 92
 Requests/sec:   3833.90
 Transfer/sec:    363.17KB
+```
 
 #### 线程池版本测试
+```Bash
 root@ubuntu:/home/huyang/wrk# wrk -d30s -c 10000 -t 8 'http://127.0.0.1:8080'
 Running 30s test @ http://127.0.0.1:8080
   8 threads and 10000 connections
@@ -35,8 +40,10 @@ Running 30s test @ http://127.0.0.1:8080
   Socket errors: connect 0, read 138800, write 986533, timeout 1908
 Requests/sec:  37377.60
 Transfer/sec:      3.46MB
+```
 
 #### Netty版本测试
+```Bash
 root@ubuntu:/home/huyang/wrk# wrk -d30s -c 10000 -t 8 'http://127.0.0.1:8080'
 Running 30s test @ http://127.0.0.1:8080
   8 threads and 10000 connections
@@ -47,4 +54,5 @@ Running 30s test @ http://127.0.0.1:8080
   Socket errors: connect 0, read 0, write 0, timeout 2396
 Requests/sec:  64837.54
 Transfer/sec:      6.48MB
+```
 
