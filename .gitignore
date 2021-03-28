@@ -12,6 +12,7 @@ node_modules/
 .idea/
 # Editor directories and files
 .idea
+target/
 .vscode
 *.suo
 *.ntvs*
