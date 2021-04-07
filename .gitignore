@@ -18,5 +18,6 @@ target/
 *.ntvs*
 *.njsproj
 *.sln
+*.iml
 package-lock.json
 .env.production.local

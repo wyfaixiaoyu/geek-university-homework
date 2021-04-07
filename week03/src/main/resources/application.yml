@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: netty-gateway-server
+  profiles:
+    active: dev
+gateway:
+  outbound:
+    strategy: 'HTTPCLIENT'
+  server:
+    proxy: 127.0.0.1:8081,127.0.0.1:8082
+---
+spring:
+  profiles: dev
+gateway:
+  outbound:
+    strategy: 'HTTPCLIENT'
+  server:
+    proxy: 127.0.0.1:8081,127.0.0.1:8082
+---
+spring:
+  profiles: prod
+gateway:
+  outbound:
+    strategy: 'HTTPCLIENT'
+  server:
+    proxy: 192.168.3.30:8080,192.168.3.31:8080
